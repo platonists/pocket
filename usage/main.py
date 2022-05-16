@@ -12,14 +12,14 @@ from web3.main import get_default_modules
 """
 uri = 'https://mainnet.infura.io/v3/e15f0589fa624c27a01cdaf6a2838773'
 
-web3 = Web3(HTTPProvider())
+web3 = Web3(HTTPProvider(uri))
 print(get_default_modules())    # web3默认支持的rpc模块
 
 # 示例：查询区块号
-print(web3.eth.block_number())
+print(web3.eth.block_number)
 
 # 示例：查询合约地址上的代码
-print(web3.eth.get_code(''))    # 填入合约地址
+print(web3.eth.get_code('你的合约地址'))
 
 
 ################
